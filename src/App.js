@@ -45,6 +45,16 @@ function App() {
         <Route path='/pranchise' component={Pranchise}/>
         <Route path='/community' component={Community}/>
       </div>
+      <footer className="footer">
+        <div className="footer_in">
+          <p>
+          서울 특별시 송파구 법원로 8길 9, 7층 (주)다도글로벌/드롭탑 | T.(02)541-7800 <br/>
+          사업자등록번호 : 211-88-47165 | 대표 : 임문수 | 개인정보관리책임자 : 임동진 | 통신판매업번호 : 2019-서울서초-1518<br/>
+          마케팅∙제휴 문의 top_mkt@dadoglobal.com<br/>
+          Copyright ⓒ 2021 DROPTOP All Rights Reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
