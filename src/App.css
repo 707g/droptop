@@ -25,12 +25,10 @@
   align-items: center;
 }
 
-
 .logo {
-  width: 250px;
+  width: 280px;
   height: 70px;
 }
-
 
 nav {
   display: flex;
@@ -53,10 +51,10 @@ nav ul li {
 
 nav ul li a {
   box-sizing: border-box;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 nav ul li:last-child a {
@@ -69,7 +67,7 @@ nav ul li a:hover {
 .q_mn {
   position: absolute;
   top: 20px;
-  right: 388px;
+  right: 455px;
   display: flex;
   margin: 0;
   padding: 0;
@@ -77,7 +75,7 @@ nav ul li a:hover {
 
 .q_mn li {
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   color: #fff;
