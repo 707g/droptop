@@ -55,6 +55,28 @@ const MainContent = styled.div`
 `;
 
 const MainMenu = styled.div`
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+
+  .mainMenu_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #003366;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
 
 `;
 
@@ -82,7 +104,15 @@ function Main() {
           처음부터 끝까지 소비자를 생각한 공정</p>
       </MainHeader>
       <MainContent>
-        <MainMenu></MainMenu>
+        <MainMenu>
+          <div className='mainMenu_in'>
+            <h1>DROPTOP'S NEW MENU</h1>
+            <p>드롭탑 신메뉴</p>
+            <div>
+              
+            </div>
+          </div>
+        </MainMenu>
         <MainCoffeeStory></MainCoffeeStory>
         <MainStore></MainStore>
         <MainNotice></MainNotice>
