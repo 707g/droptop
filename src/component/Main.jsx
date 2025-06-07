@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MainHeader = styled.div`
   width: 100%;
@@ -56,7 +57,7 @@ const MainContent = styled.div`
 
 const MainMenu = styled.div`
   width: 100%;
-  height: 800px;
+  height: 860px;
   display: flex;
   justify-content: center;
 
@@ -76,8 +77,74 @@ const MainMenu = styled.div`
       font-size: 18px;
       font-weight: 600;
     }
+
+    .mainMenuBtn {
+      width: 200px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
   }
 
+`;
+
+const MainMenuList = [
+  {
+    id: 1,
+    src: "/images/main/mainMenu01.png",
+    ttl: "바나나 크림 라떼(ICE)",
+    eng: "Banana Cream Latte",
+  },
+  {
+    id: 2,
+    src: "/images/main/mainMenu02.png",
+    ttl: "바닐라빈 오트 콜드블루 라떼",
+    eng: "Vanilla Bean Oat Cold Brew",
+  },
+  {
+    id: 3,
+    src: "/images/main/mainMenu03.jpg",
+    ttl: "달콤 연유 밀크 블렌디드",
+    eng: "Sweet Milk Bite Blended",
+  },
+  {
+    id: 4,
+    src: "/images/main/mainMenu04.jpg",
+    ttl: "제주 말차 통팥 블렌디드",
+    eng: "Jeju Malcha Red Bean",
+  },
+]
+
+const ItemBlock = styled.div`
+  width: 23%;
+  height: 400x;
+  margin: 50px 1% 0 1%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+
+  img {
+    width: 70%;
+    margin: 15px 0;
+  }
+  h4 {
+    font-size: 15px;
+    color: #6B6B6B;
+  }
+  p {
+    font-size: 12px !important;
+    color: #6B6B6B;
+  }
 `;
 
 const MainCoffeeStory = styled.div`
@@ -91,7 +158,18 @@ const MainStore = styled.div`
 const MainNotice = styled.div`
 `;
 
+function Item({item}) {
+  return(
+    <ItemBlock>
+      <img src={process.env.PUBLIC_URL + item.src} alt='' />
+      <h4>{item.ttl}</h4>
+      <p>{item.eng}</p>
+    </ItemBlock>
+  );
+}
+
 function Main() {
+  const navigate = useNavigate();
   return (
     <>
       <MainHeader>
@@ -108,9 +186,14 @@ function Main() {
           <div className='mainMenu_in'>
             <h1>DROPTOP'S NEW MENU</h1>
             <p>드롭탑 신메뉴</p>
-            <div>
-              
+            <div style={{display: "flex", flexWrap: "wrap"}}>
+              {
+                MainMenuList.map(item => (
+                  <Item key={item.id} item={item}/>
+                ))
+              }
             </div>
+            <div className='mainMenuBtn' onClick={() => navigate("/menu")}>자세히보기</div>
           </div>
         </MainMenu>
         <MainCoffeeStory></MainCoffeeStory>
