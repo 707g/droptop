@@ -88,6 +88,10 @@ const MainMenu = styled.div`
       border-radius: 10px;
       font-size: 18px;
       cursor: pointer;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
     }
   }
 
@@ -169,15 +173,68 @@ const MainCoffeeStory = styled.div`
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
+
+    &:hover {
+      background-color: #D5D5D3;
+    }
   }
 
 `;
 
 const MainStore = styled.div`
+  width: 100%;
+  height: 500px;
+  background-color: #E9E9E7;
+  display: flex;
+  justify-content: center;
 
+  img {
+    width: 600px;
+    height: 460px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 10px 0 0 80px;
+  }
+
+  .store_in {
+    width: 900px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    h1 {
+      color: #003366;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: #003366;
+    }
+
+    .mainStoreBtn {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #D5D5D3;
+    }
+    }
+  }
 `;
 
 const MainNotice = styled.div`
+  
 `;
 
 function Item({item}) {
@@ -224,7 +281,15 @@ function Main() {
             <div className='coffeeStoryBtn' onClick={() => navigate("/coffeestory")}>자세히 보기</div>
           </div>
         </MainCoffeeStory>
-        <MainStore></MainStore>
+        <div style={{width: "100%", height: "200px"}}></div>
+        <MainStore>
+          <img src={process.env.PUBLIC_URL + "/images/main/mainstore.png"} alt="mainStore" />
+          <div className='store_in'>
+            <h1>전국 어디서나 DROPTOP과 함께!</h1>
+            <h2>가까운 드롭탑 카페를 확인해보세요.</h2>
+            <div className='mainStoreBtn' onClick={() => navigate("/store")}>매장 찾기</div>
+          </div>
+        </MainStore>
         <MainNotice></MainNotice>
       </MainContent>
     </>
