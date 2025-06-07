@@ -29,7 +29,6 @@ const MainHeader = styled.div`
     display: flex;
     justify-content: left;
     align-items: center;
-    
   }
 
   h1 {
@@ -148,6 +147,29 @@ const ItemBlock = styled.div`
 `;
 
 const MainCoffeeStory = styled.div`
+  width: 100%;
+  height: 1150px;
+  display: flex;
+  justify-content: center;
+  background-color: #E9E9E7;
+
+  img {
+    width: auto;
+    height: 1000px;
+  }
+
+  .coffeeStoryBtn {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0px 80px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
 
 `;
 
@@ -196,7 +218,12 @@ function Main() {
             <div className='mainMenuBtn' onClick={() => navigate("/menu")}>자세히보기</div>
           </div>
         </MainMenu>
-        <MainCoffeeStory></MainCoffeeStory>
+        <MainCoffeeStory>
+          <div>
+            <img src= {process.env.PUBLIC_URL + "/images/main/coffeestory.png"} alt="coffeestory" />
+            <div className='coffeeStoryBtn' onClick={() => navigate("/coffeestory")}>자세히 보기</div>
+          </div>
+        </MainCoffeeStory>
         <MainStore></MainStore>
         <MainNotice></MainNotice>
       </MainContent>
