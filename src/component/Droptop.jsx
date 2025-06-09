@@ -8,11 +8,18 @@ import { useLocation } from 'react-router-dom';
 const DroptopHeader = styled.div`
   width: 100%;
   height: 270px;
+
+  img {
+    width: 100%;
+    height: 200px;
+  }
+    
 `;
 
 const CustomTabsWrapper = styled.div`
   width: 56%;
   margin: 0 auto;
+  margin-bottom: 50px;
 
   .nav-tabs {
     background-color: #EEF7FD;
