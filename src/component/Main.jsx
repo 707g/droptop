@@ -126,7 +126,7 @@ const MainMenuList = [
 
 const ItemBlock = styled.div`
   width: 23%;
-  height: 400px;
+  height: 320px;
   margin: 50px 1% 0 1%;
   border: 1px solid #ccc;
   box-sizing: border-box;

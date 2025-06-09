@@ -4,7 +4,7 @@ import { IoMdHome } from "react-icons/io";
 
 const CoffeeStoryHeader = styled.div`
   width: 100%;
-  height: 270px;
+  height: 250px;
   display: flex;
   justify-content: center;
 

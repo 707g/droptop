@@ -8,6 +8,7 @@ import Menu from "./component/Menu";
 import Store from "./component/Store";
 import Pranchise from "./component/Pranchise";
 import Community from "./component/Community";
+import Event from "./component/Event";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path='/menu' element={<Menu />} />
           <Route path='/store' element={<Store />} />
           <Route path='/pranchise' element={<Pranchise />} />
+          <Route path='/event' element={<Event />} />
           <Route path='/community' element={<Community />} />
         </Routes>
       </div>

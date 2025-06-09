@@ -17,7 +17,7 @@ const DroptopHeader = styled.div`
 `;
 
 const CustomTabsWrapper = styled.div`
-  width: 56%;
+  width: 55%;
   margin: 0 auto;
   margin-bottom: 50px;
 
@@ -60,14 +60,14 @@ function Droptop() {
         id="justify-tab-example"
         className="mb-3"
         justify
-      >
+        >
         <Tab eventKey="brandstory" title="브랜드이야기">
           <img src={process.env.PUBLIC_URL + "/images/droptop/brandstory.jpg"} alt="brandstory" />
         </Tab>
         <Tab eventKey="interior" title="인테리어 콘셉트">
           <img src={process.env.PUBLIC_URL + "/images/droptop/interior.jpg"} alt="interior" />
         </Tab>
-      </Tabs>
+        </Tabs>
       </CustomTabsWrapper>
     </>
   );
