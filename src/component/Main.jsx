@@ -126,7 +126,7 @@ const MainMenuList = [
 
 const ItemBlock = styled.div`
   width: 23%;
-  height: 400x;
+  height: 400px;
   margin: 50px 1% 0 1%;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -234,7 +234,104 @@ const MainStore = styled.div`
 `;
 
 const MainNotice = styled.div`
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+
+  .mainNotice_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #003366;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .mainNoticeBtn {
+      width: 200px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+`;
+
+const NoticeMenuList = [
+  {
+    id: 1,
+    ttl: "25. 05 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+    date: "2025-05-15",
+  },
+  {
+    id: 2,
+    ttl: "25. 04 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+    date: "2025-04-22",
+  },
+  {
+    id: 3,
+    ttl: "25. 04 드롭탑 휴게소 매장 판매제품 영양성분 및 알레르기 유발물질 안내 ",
+    date: "2025-04-22",
+  },
+  {
+    id: 4,
+    ttl: "25. 03 드롭탑 판매제품 영양성분 및 알레르기 유발물질 안내",
+    date: "2025-03-12",
+  },
   
+]
+
+const NoticeBlock = styled.div`
+  width: 15%;
+  height: 180px;
+  margin: 50px 1% 0 1%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+
+  h4 {
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px 10px 10px 10px;
+
+  }
+
+  p {
+    font-size: 15px !important;
+    color: #6B6B6B;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
 `;
 
 function Item({item}) {
@@ -244,6 +341,16 @@ function Item({item}) {
       <h4>{item.ttl}</h4>
       <p>{item.eng}</p>
     </ItemBlock>
+  );
+}
+
+function Notice({notice}) {
+  return(
+    <NoticeBlock>
+      <h4>{notice.ttl}</h4>
+      <p>{notice.date}</p>
+    </NoticeBlock>
+
   );
 }
 
@@ -290,7 +397,20 @@ function Main() {
             <div className='mainStoreBtn' onClick={() => navigate("/store")}>매장 찾기</div>
           </div>
         </MainStore>
-        <MainNotice></MainNotice>
+        <MainNotice>
+          <div className='mainNotice_in'>
+            <h1>공지사항</h1>
+            <p>드롭탑 소식을 전해드립니다.</p>
+            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+              {
+                NoticeMenuList.map(notice => (
+                  <Notice key={notice.id} notice={notice} />
+                ))
+              }
+            </div>
+            <div className='mainNoticeBtn' onClick={() => navigate("/community")}>+ 더보기</div>
+          </div>
+        </MainNotice>
       </MainContent>
     </>
   );
