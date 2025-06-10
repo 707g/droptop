@@ -101,51 +101,50 @@ const MainMenuList = [
   {
     id: 1,
     src: "/images/main/mainMenu01.png",
-    ttl: "바나나 크림 라떼(ICE)",
-    eng: "Banana Cream Latte",
+    ttl: "샹그리아 레몬 에이드 (L)",
+    eng: "Shangri-La Lemonade",
   },
   {
     id: 2,
     src: "/images/main/mainMenu02.png",
-    ttl: "바닐라빈 오트 콜드블루 라떼",
-    eng: "Vanilla Bean Oat Cold Brew",
+    ttl: "수박 주스 (R/L)",
+    eng: "Watermelon Juice",
   },
   {
     id: 3,
-    src: "/images/main/mainMenu03.jpg",
-    ttl: "달콤 연유 밀크 블렌디드",
-    eng: "Sweet Milk Bite Blended",
+    src: "/images/main/mainMenu03.png",
+    ttl: "애플망고 블렌디드 (R/L)",
+    eng: "Apple Mango Blended",
   },
   {
     id: 4,
     src: "/images/main/mainMenu04.jpg",
-    ttl: "제주 말차 통팥 블렌디드",
-    eng: "Jeju Malcha Red Bean",
+    ttl: "달콤 연유 밀크 블렌디드",
+    eng: "Sweet Milk Bite Blended",
   },
 ]
 
 const ItemBlock = styled.div`
   width: 23%;
   height: 320px;
-  margin: 50px 1% 0 1%;
+  margin: 30px 1% 0 1%;
   border: 1px solid #ccc;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 10px 10px 20px 10px;
 
   img {
     width: 70%;
     margin: 15px 0;
   }
   h4 {
-    font-size: 15px;
+    font-size: 18px;
     color: #6B6B6B;
   }
   p {
-    font-size: 12px !important;
+    font-size: 15px !important;
     color: #6B6B6B;
   }
 `;

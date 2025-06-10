@@ -71,7 +71,7 @@ const CoffeeStoryContent = styled.div`
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 `;
 
 function CoffeeStroy() {
@@ -97,7 +97,7 @@ function CoffeeStroy() {
         </div>
       </CoffeeStoryTitle>
       <CoffeeStoryContent>
-        <img src={process.env.PUBLIC_URL + "/images/coffeestory/coffeestory.png"} alt="" />
+        <img src={process.env.PUBLIC_URL + "/images/coffeestory/coffeestory.png"} alt="coffeestory" />
       </CoffeeStoryContent>
     </>
   );

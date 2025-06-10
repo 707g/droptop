@@ -6,7 +6,7 @@ import Droptop from "./component/Droptop";
 import CoffeeStroy from "./component/CoffeeStroy";
 import Menu from "./component/Menu";
 import Store from "./component/Store";
-import Pranchise from "./component/Pranchise";
+import Franchise from "./component/Franchise";
 import Community from "./component/Community";
 import Event from "./component/Event";
 
@@ -25,7 +25,7 @@ function App() {
                 <li><Link to='/coffeestory'>925 커피</Link></li>
                 <li><Link to='/menu'>MENU</Link></li>
                 <li><Link to='/store'>STORE</Link></li>
-                <li><Link to='/pranchise'>PRANCHISE</Link></li>
+                <li><Link to='/franchise'>FRANCHISE</Link></li>
                 <li><Link to='/event'>EVENT</Link></li>
                 <li><Link to='/community'>COMMUNITY</Link></li>
               </ul>
@@ -47,7 +47,7 @@ function App() {
           <Route path='/coffeestory' element={<CoffeeStroy />} />
           <Route path='/menu' element={<Menu />} />
           <Route path='/store' element={<Store />} />
-          <Route path='/pranchise' element={<Pranchise />} />
+          <Route path='/franchise' element={<Franchise />} />
           <Route path='/event' element={<Event />} />
           <Route path='/community' element={<Community />} />
         </Routes>

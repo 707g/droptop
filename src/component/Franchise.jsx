@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { IoMdHome } from "react-icons/io";
 
-const PranchiseHeader = styled.div`
+const FranchiseHeader = styled.div`
   width: 100%;
   height: 250px;
   display: flex;
@@ -14,13 +14,13 @@ const PranchiseHeader = styled.div`
   }
 `;
 
-const PranchiseTitle = styled.div`
+const FranchiseTitle = styled.div`
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
 
-  .pranchise_in {
+  .franchise_in {
     width: 952px;
     height: 200px;
     display: flex;
@@ -30,7 +30,7 @@ const PranchiseTitle = styled.div`
       color: #6B6B6B;
     }
 
-    .pranchise_title {
+    .franchise_title {
       width: 952px;
       display: flex;
       justify-content: space-between;
@@ -66,15 +66,26 @@ const PranchiseTitle = styled.div`
   }
 `;
 
-function Pranchise() {
+const FranchiseContent = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  img:last-of-type {
+    margin-bottom: 80px;
+  }
+`;
+
+function Franchise() {
   return (
     <>
-      <PranchiseHeader>
-        <img src={process.env.PUBLIC_URL + "/images/pranchise/mainImg.png"} alt="mainImg" />
-      </PranchiseHeader>
-      <PranchiseTitle>
-        <div className='pranchise_in'>
-          <div className='pranchise_title'>
+      <FranchiseHeader>
+        <img src={process.env.PUBLIC_URL + "/images/franchise/mainImg.png"} alt="mainImg" />
+      </FranchiseHeader>
+      <FranchiseTitle>
+        <div className='franchise_in'>
+          <div className='franchise_title'>
             <h1>창업 안내</h1>
             <div className="nav">
               <IoMdHome />
@@ -84,9 +95,13 @@ function Pranchise() {
           </div>
           <p>드롭탑 가맹점 개설절차 및 개설조건을 알려드립니다.</p>
         </div>
-      </PranchiseTitle>
+      </FranchiseTitle>
+      <FranchiseContent>
+        <img src={process.env.PUBLIC_URL + "/images/franchise/franchise01.jpg"} alt="franchise01" />
+        <img src={process.env.PUBLIC_URL + "/images/franchise/franchise02.png"} alt="franchise02" />
+      </FranchiseContent>
     </>
   );
 }
 
-export default Pranchise;
+export default Franchise;
