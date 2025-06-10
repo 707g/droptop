@@ -66,6 +66,59 @@ const CommunityTitle = styled.div`
   }
 `;
 
+const CommunityList = styled.div`
+  width: 952px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .search-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    select, input, button {
+      height: 32px;
+      margin-left: 8px;
+      padding: 0 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #003366;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background-color: #f2f2f2;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .no-data {
+      color: #888;
+      padding: 40px 0;
+      text-align: center;
+    }
+  }
+`;
+
+
 function Community() {
   return (
     <>
@@ -85,6 +138,33 @@ function Community() {
           <p>드롭탑 커피의 공지사항 게시판입니다.</p>
         </div>
       </CommunityTitle>
+      <CommunityList>
+        <div className="search-bar">
+          <select>
+            <option>제목</option>
+            <option>내용</option>
+          </select>
+          <input type="text" placeholder="검색어를 입력하세요" />
+          <button>검색</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>글쓴이</th>
+              <th>날짜</th>
+              <th>조회</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colSpan="5" className="no-data">등록된 게시물이 없습니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </CommunityList>
     </>
   );
 }

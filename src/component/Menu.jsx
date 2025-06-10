@@ -5,6 +5,14 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useLocation } from 'react-router-dom';
+import New from './Menu/New';
+import Coffee from './Menu/Coffee';
+import Beverage from './Menu/Beverage';
+import Blended from './Menu/Blended';
+import Tea from './Menu/Tea';
+import IceTop from './Menu/IceTop';
+import Food from './Menu/Food';
+import Cake from './Menu/Cake';
 
 const MenuHeader = styled.div`
   width: 100%;
@@ -129,20 +137,28 @@ function Menu() {
         justify
         >
           <Tab eventKey="NEW" title="NEW">
+            <New />
           </Tab>
           <Tab eventKey="COFFEE" title="COFFEE">
+            <Coffee />
           </Tab>
           <Tab eventKey="BEVERAGE" title="BEVERAGE">
+            <Beverage />
           </Tab>
           <Tab eventKey="BLENDED" title="BLENDED">
+            <Blended />
           </Tab>
           <Tab eventKey="TEA" title="TEA">
+            <Tea />
           </Tab>
           <Tab eventKey="ICE TOP" title="ICE TOP">
+            <IceTop />
           </Tab>
           <Tab eventKey="FOOD" title="FOOD">
+            <Food />
           </Tab>
           <Tab eventKey="CAKE" title="CAKE">
+            <Cake />
           </Tab>
         </Tabs>
       </CustomTabsWrapper>
