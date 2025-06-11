@@ -38,7 +38,7 @@ const FranchiseTitle = styled.div`
 
       h1 {
         font-weight: 600;
-        color: #003366;
+        color: #0A2986;
       }
 
       .nav {
@@ -54,7 +54,7 @@ const FranchiseTitle = styled.div`
         }
 
         .current {
-          color: #003366;
+          color: #0A2986;
           font-weight: bold;
         }
 

@@ -21,7 +21,7 @@ const MainMenu = styled.div`
     align-items: center;
 
     h1 {
-      color: #003366;
+      color: #0A2986;
       font-size: 30px;
       margin-bottom: 10px;
     }
@@ -157,12 +157,12 @@ const MainStore = styled.div`
     box-sizing: border-box;
 
     h1 {
-      color: #003366;
+      color: #0A2986;
     }
 
     h2 {
       font-weight: 400;
-      color: #003366;
+      color: #0A2986;
     }
 
     .mainStoreBtn {
@@ -197,7 +197,7 @@ const MainNotice = styled.div`
     align-items: center;
 
     h1 {
-      color: #003366;
+      color: #0A2986;
       font-size: 30px;
       margin-bottom: 10px;
     }

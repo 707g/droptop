@@ -50,7 +50,7 @@ const MenuTitle = styled.div`
 
       h1 {
         font-weight: 600;
-        color: #003366;
+        color: #0A2986;
       }
 
       .nav {
@@ -66,7 +66,7 @@ const MenuTitle = styled.div`
         }
 
         .current {
-          color: #003366;
+          color: #0A2986;
           font-weight: bold;
         }
 
@@ -88,7 +88,7 @@ const CustomTabsWrapper = styled.div`
   }
 
   .nav-tabs .nav-link {
-    color: #003366;
+    color: #0A2986;
     padding: 12px 20px;
     font-size: 17px;
     font-weight: 600;
@@ -96,7 +96,7 @@ const CustomTabsWrapper = styled.div`
 
   .nav-tabs .nav-link.active {
     color: #fff;
-    background-color: #003366;
+    background-color: #0A2986;
   }
 `;
 

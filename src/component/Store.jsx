@@ -39,7 +39,7 @@ const StoreTitle = styled.div`
 
       h1 {
         font-weight: 600;
-        color: #003366;
+        color: #0A2986;
       }
 
       .nav {
@@ -55,7 +55,7 @@ const StoreTitle = styled.div`
         }
 
         .current {
-          color: #003366;
+          color: #0A2986;
           font-weight: bold;
         }
 
