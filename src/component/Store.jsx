@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { IoMdHome } from "react-icons/io";
+import { Map } from "react-kakao-maps-sdk";
 
 const StoreHeader = styled.div`
   width: 100%;
@@ -85,6 +86,18 @@ function Store() {
           <p>전국 드롭탑 매장의 위치와 정보를 확인하실 수 있습니다.</p>
         </div>
       </StoreTitle>
+      <Map
+        id='map'
+        center={{
+          lat: 35.92018161540978,
+          lng: 128.61061273680292,
+        }}
+        style={{
+          width: "1000px",
+          height: "500px",
+        }}
+        level={2}
+      />
     </>
   );
 }

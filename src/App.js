@@ -17,7 +17,7 @@ function App() {
         <div className="header_in">
           <div className="header_main">
             <h1 className="logo">
-              <Link to='/'><img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="logo" style={{ width: "100%", height: "100%", objectFit: "contain" }} /></Link>
+              <Link to='/'><img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="logo" style={{ width: "100%", height: "100%", objectFit: "cover" }} /></Link>
             </h1>
             <nav>
               <ul>
