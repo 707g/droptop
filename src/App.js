@@ -9,6 +9,8 @@ import Store from "./component/Store";
 import Franchise from "./component/Franchise";
 import Community from "./component/Community";
 import Event from "./component/Event";
+import LoginPage from "./component/LoginPage";
+import JoinPage from "./component/JoinPage";
 
 function App() {
   return (
@@ -32,9 +34,13 @@ function App() {
             </nav>
           </div>
           <ul className="q_mn">
-            <li>Login</li>
-            <li>Join</li>
-            <li>Eng</li>
+            <li><Link to='/login'>Login</Link></li>
+            <li><Link to='/join'>Join</Link></li>
+            <li>
+              <a href="https://www.cafedroptop.com/n/en/src/main.php" target="_blank" rel="noopener noreferrer">
+                Eng
+              </a>
+            </li>
             <li>Membership</li>
           </ul>
         </div>
@@ -50,6 +56,8 @@ function App() {
           <Route path='/franchise' element={<Franchise />} />
           <Route path='/event' element={<Event />} />
           <Route path='/community' element={<Community />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/join' element={<JoinPage />} />
         </Routes>
       </div>
 
