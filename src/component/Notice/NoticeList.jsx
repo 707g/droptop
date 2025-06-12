@@ -23,7 +23,6 @@ const ItemBlock = styled.div`
   img {
     width: 70%;
     margin: 15px 0;
-    cursor: pointer;
   }
   h4 {
     font-size: 16px;
@@ -35,26 +34,41 @@ const ItemBlock = styled.div`
   }
 `;
 
-function IceTop({item}) {
+function NoticeList({item}) {
   const newList = [
     {
       id: 1,
-      src: `${process.env.PUBLIC_URL}/images/menu/icetop/icetop01.jpg`,
-      ttl: "쫀득 통팥 모찌 빙수",
-      eng: "Chewy Red Bean Mochi",
+      number: index,
+      title: "25. 06 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+      writer: "관리자",
+      date: "2025-06-10",
+      views: "0"
     },
     {
-      id: 2,
-      src: `${process.env.PUBLIC_URL}/images/menu/icetop/icetop02.jpg`,
-      ttl: "황금 망고 모찌 빙수",
-      eng: "Golden Mango Mochi Bingsu",
+      id: 1,
+      number: index,
+      title: "25. 06 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+      writer: "관리자",
+      date: "2025-06-10",
+      views: "0"
     },
     {
-      id: 3,
-      src: `${process.env.PUBLIC_URL}/images/menu/icetop/icetop03.jpg`,
-      ttl: "상큼 오미자 모찌 빙수",
-      eng: "Tangy Omija Mochi Bingsu",
+      id: 1,
+      number: index,
+      title: "25. 06 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+      writer: "관리자",
+      date: "2025-06-10",
+      views: "0"
     },
+    {
+      id: 1,
+      number: index,
+      title: "25. 06 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+      writer: "관리자",
+      date: "2025-06-10",
+      views: "0"
+    },
+    
   ];
 
     return (
@@ -71,4 +85,4 @@ function IceTop({item}) {
 }
 
 
-export default IceTop;
+export default NoticeList;

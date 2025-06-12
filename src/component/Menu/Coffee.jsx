@@ -23,6 +23,7 @@ const ItemBlock = styled.div`
   img {
     width: 70%;
     margin: 15px 0;
+    cursor: pointer;
   }
   h4 {
     font-size: 16px;

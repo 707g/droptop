@@ -9,7 +9,7 @@ const CommunityHeader = styled.div`
   justify-content: center;
 
   img {
-    width: 50%;
+    width: 952px;
     height: 200px;
   }
 `;
