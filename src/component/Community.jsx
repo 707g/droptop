@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { IoMdHome } from "react-icons/io";
+import NoticeList from './Notice/NoticeList';
 
 const CommunityHeader = styled.div`
   width: 100%;
@@ -71,6 +72,7 @@ const CommunityList = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 80px;
 
   .search-bar {
     display: flex;
@@ -86,7 +88,7 @@ const CommunityList = styled.div`
     }
 
     button {
-      background-color: #003366;
+      background-color: #0A2986;
       color: #fff;
       cursor: pointer;
     }
@@ -104,6 +106,7 @@ const CommunityList = styled.div`
       padding: 12px;
       border: 1px solid #ddd;
       text-align: center;
+      cursor: pointer;
     }
 
     tbody tr:hover {
@@ -117,7 +120,6 @@ const CommunityList = styled.div`
     }
   }
 `;
-
 
 function Community() {
   return (
@@ -159,9 +161,7 @@ function Community() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td colSpan="5" className="no-data">등록된 게시물이 없습니다.</td>
-            </tr>
+            <NoticeList/>
           </tbody>
         </table>
       </CommunityList>
