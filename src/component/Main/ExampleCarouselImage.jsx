@@ -13,7 +13,7 @@ function ExampleCarouselImage({ src, alt = '', text }) {
         alignItems: 'center',
       }}
     >
-      {/* ✅ 블러 처리된 배경 */}
+      {/*블러 처리된 배경 */}
       <img
         src={src}
         alt=""
@@ -29,7 +29,7 @@ function ExampleCarouselImage({ src, alt = '', text }) {
         }}
       />
 
-      {/* ✅ 실제 이미지 중앙 정렬 */}
+      {/* 실제 이미지 중앙 정렬 */}
       <img
         src={src}
         alt={alt || text}
