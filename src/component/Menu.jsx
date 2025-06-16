@@ -79,7 +79,7 @@ const MenuTitle = styled.div`
 `;
 
 const CustomTabsWrapper = styled.div`
-  width: 50%;
+  width: 952px;
   margin: 0 auto;
   margin-bottom: 50px;
 

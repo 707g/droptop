@@ -103,6 +103,9 @@ const ItemBlock = styled.div`
     font-size: 13px !important;
     color: #6B6B6B;
   }
+  &:hover {
+    border-color: #888888;
+  }
 `;
 
 function Event() {

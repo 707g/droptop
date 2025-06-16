@@ -11,7 +11,6 @@
 }
 
 .header_in {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +34,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 15px;
 } 
 
 nav ul {
@@ -69,10 +68,8 @@ nav ul li a:hover {
 }
 
 .q_mn {
-  position: absolute;
-  top: 20px;
-  right: 482px;
   display: flex;
+  justify-content: right;
   margin: 0;
   padding: 0;
 }

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import MainHeader from './Main/MainHeader'
+import { useProState } from '../stateContext';
 
 const MainContent = styled.div`
   width: 100%;
@@ -50,32 +51,32 @@ const MainMenu = styled.div`
   }
 `;
 
-const MainMenuList = [
-  {
-    id: 1,
-    src: "/images/main/mainMenu01.png",
-    ttl: "샹그리아 레몬 에이드 (L)",
-    eng: "Shangri-La Lemonade",
-  },
-  {
-    id: 2,
-    src: "/images/main/mainMenu02.png",
-    ttl: "수박 주스 (R/L)",
-    eng: "Watermelon Juice",
-  },
-  {
-    id: 3,
-    src: "/images/main/mainMenu03.png",
-    ttl: "애플망고 블렌디드 (R/L)",
-    eng: "Apple Mango Blended",
-  },
-  {
-    id: 4,
-    src: "/images/main/mainMenu04.jpg",
-    ttl: "달콤 연유 밀크 블렌디드",
-    eng: "Sweet Milk Bite Blended",
-  },
-]
+// const MainMenuList = [
+//   {
+//     id: 1,
+//     src: "/images/main/mainMenu01.png",
+//     ttl: "샹그리아 레몬 에이드 (L)",
+//     eng: "Shangri-La Lemonade",
+//   },
+//   {
+//     id: 2,
+//     src: "/images/main/mainMenu02.png",
+//     ttl: "수박 주스 (R/L)",
+//     eng: "Watermelon Juice",
+//   },
+//   {
+//     id: 3,
+//     src: "/images/main/mainMenu03.png",
+//     ttl: "애플망고 블렌디드 (R/L)",
+//     eng: "Apple Mango Blended",
+//   },
+//   {
+//     id: 4,
+//     src: "/images/main/mainMenu04.jpg",
+//     ttl: "달콤 연유 밀크 블렌디드",
+//     eng: "Sweet Milk Bite Blended",
+//   },
+// ]
 
 const ItemBlock = styled.div`
   width: 23%;
@@ -227,29 +228,29 @@ const MainNotice = styled.div`
 
 `;
 
-const NoticeMenuList = [
-  {
-    id: 1,
-    ttl: "25. 05 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
-    date: "2025-05-15",
-  },
-  {
-    id: 2,
-    ttl: "25. 04 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
-    date: "2025-04-22",
-  },
-  {
-    id: 3,
-    ttl: "25. 04 드롭탑 휴게소 매장 판매제품 영양성분 및 알레르기 유발물질 안내 ",
-    date: "2025-04-22",
-  },
-  {
-    id: 4,
-    ttl: "25. 03 드롭탑 판매제품 영양성분 및 알레르기 유발물질 안내",
-    date: "2025-03-12",
-  },
+// const NoticeMenuList = [
+//   {
+//     id: 1,
+//     ttl: "25. 05 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+//     date: "2025-05-15",
+//   },
+//   {
+//     id: 2,
+//     ttl: "25. 04 드롭탑 매장 판매제품 영양성분 및 알레르기 유발물질 안내",
+//     date: "2025-04-22",
+//   },
+//   {
+//     id: 3,
+//     ttl: "25. 04 드롭탑 휴게소 매장 판매제품 영양성분 및 알레르기 유발물질 안내 ",
+//     date: "2025-04-22",
+//   },
+//   {
+//     id: 4,
+//     ttl: "25. 03 드롭탑 판매제품 영양성분 및 알레르기 유발물질 안내",
+//     date: "2025-03-12",
+//   },
   
-]
+// ]
 
 const NoticeBlock = styled.div`
   width: 15%;
@@ -307,6 +308,8 @@ function Notice({notice}) {
 
 function Main() {
   const navigate = useNavigate();
+  const data = useProState()[0];
+  const dataNotice = useProState()[1];
   return (
     <>
       <MainHeader />
@@ -317,7 +320,7 @@ function Main() {
             <p>드롭탑 신메뉴</p>
             <div style={{display: "flex", flexWrap: "wrap"}}>
               {
-                MainMenuList.map(item => (
+                data.map(item => (
                   <Item key={item.id} item={item}/>
                 ))
               }
@@ -346,7 +349,7 @@ function Main() {
             <p>드롭탑 소식을 전해드립니다.</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
               {
-                NoticeMenuList.map(notice => (
+                dataNotice.map(notice => (
                   <Notice key={notice.id} notice={notice} />
                 ))
               }
